@@ -3,46 +3,86 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 body {
-  width: 600px;
-  height: 600px;
-  margin: 20px;
-  background-color: beige;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0px;
+  background-color: #333;
+  color: #eee;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(4, 1fr);
+
+  width: 60vmin;
+  height: 60vmin;
+  max-height: 600px;
+  max-width: 600px;
+
+  border: 0.5rem solid black;
 }
 
 .grid-items {
-  border: 0.1rem solid gray;
+  border: 0.1rem solid black;
   font-size: '2rem';
   background-color: white;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#box3, #box7, #box10, #box11, #box12, #box15 {
+/* BORDERS */
+
+#box3, 
+#box7, 
+#box11, 
+#box12, 
+#box15 {
   border-left: 0.5rem solid black;
 }
 
-#box1, #box2, #box3, #box4, #box5, #box8, #box9, #box10, #box11 {
-  border-bottom: o0.5rem solid black;
+#box1, 
+#box2, 
+#box3, 
+#box4, 
+#box5, 
+#box8, 
+#box9,
+#box10, 
+#box11 {
+  border-bottom: 0.5rem solid black;
+}
+
+#box9 {
+  border-right: 0.5rem solid black;
 }
 
 .prompt {
   position: absolute;
   top: 0%;
-  right: 0%;
+  left: 0%;
+  color: black;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .answer {
   width: 50%;
   height: 50%;
+  font-size: 2rem;
   text-align: center;
+  border: none;
+  background-color: transparent;
+
+
 }
 
 .special {
@@ -50,8 +90,13 @@ body {
   font-size: 2rem;
 }
 
-@media only screen and (min-width: 475px) {
+@media only screen and (min-width: 998px) {
   html {
-    font-size: 16px
+    font-size: 20px;
+
+  }
+
+  .grid {
+
   }
 }
